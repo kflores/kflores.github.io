@@ -38,52 +38,106 @@
 
     <!-- Begin slides -->
     <section class="slide" id="title-slide">
-      <h1>CoderDojo Indigo</h1>
+      <h2>Welcome to CoderDojo Indigo!</h2>
+      <img src="images/coderdojo_logo.png" alt="CoderDojo">
+      <img src="images/indigo_logo.png" alt="Indigo">
     </section>
 
-    <section class="slide" id="elements-videos">
-      <h2>Scratch Overview Video</h2>
-      <iframe src="http://player.vimeo.com/video/29457909?title=0&amp;byline=0&amp;portrait=0" width="500" height="281" frameborder="0"></iframe>
-    </section>
 
-    <!-- deck.navigation snippet -->
-    <div aria-role="navigation">
-      <a href="#" class="deck-prev-link" title="Previous">&#8592;</a>
-      <a href="#" class="deck-next-link" title="Next">&#8594;</a>
-    </div>
+    <section class="slide" id="CoderDojo-Bullets">
+      <h2>What is CoderDojo?</h2>
+      <img src="images/coderdojo_logo.png" alt="CoderDojo">
 
-    <!-- deck.status snippet -->
-    <p class="deck-status" aria-role="status">
-      <span class="deck-status-current"></span>
-      /
-      <span class="deck-status-total"></span>
-    </p>
+      <ul>
+        <li class="slide" id="fun">
+          Have fun learning about technology and coding
+        </li>
 
-    <!-- deck.goto snippet -->
-    <form action="." method="get" class="goto-form">
-      <label for="goto-slide">Go to slide:</label>
-      <input type="text" name="slidenum" id="goto-slide" list="goto-datalist">
-      <datalist id="goto-datalist"></datalist>
-      <input type="submit" value="Go">
-    </form>
-  </div>
+        <li class="slide" id="think">
+          Learn to think about how websites, apps, games and animations are built -- by creating your own!
+        </li>
 
-<script src="../jquery.min.js"></script>
+        <li class="slide" id="think">
+          Collaborate with others &rArr; Be supportive of what others are creating, share ideas, techniques, tips and suggestions
+        </li>
 
-<!-- Deck Core and extensions -->
-<script src="../core/deck.core.js"></script>
-<script src="../extensions/menu/deck.menu.js"></script>
-<script src="../extensions/goto/deck.goto.js"></script>
-<script src="../extensions/status/deck.status.js"></script>
-<script src="../extensions/navigation/deck.navigation.js"></script>
-<script src="../extensions/scale/deck.scale.js"></script>
+        <li class="slide" id="collaborate">
+          As we advance our skills and learn &rArr; become mentors to help others
+        </ul>
+        <p class="slide" id="dojo-concepts">We'll review a few basics, then jump right into coding projects.  Always feel free to ask questions or use a "Red Cup" to get help from a Mentor.</p>
+      </section>
 
-<!-- Initialize the deck -->
-<script>
-$(function() {
-  $.deck('.slide');
-});
-</script>
+      <section class="slide" id="Scratch-Bullets">
+        <h2>What is Scratch?</h2>
+        <img src="images/scratch_logo.png" alt="Scratch">
 
-</body>
-</html>
+        <ul>
+          <li class="slide" id="fun">
+            <strong>Easy</strong>: It's online and very simple to get started; great built-in guides and tutorials; Free!
+          </li>
+
+          <li class="slide" id="think">
+            <strong>Fast</strong>: Use visual building blocks to see your ideas and interactions working right away
+          </li>
+
+          <li class="slide" id="think">
+            <strong>Flexible</strong>: You can make many kinds of projects &rArr; games, animations, interactive stories, art
+          </li>
+
+          <li class="slide" id="collaborate">
+            <strong>Collaborative</strong>: Explore projects by others; "Share", "See Inside" and "Remix"!
+          </ul>
+          <p class="slide" id="coding-concepts">By using Scratch, you'll learn many of the common coding concepts used in all programming languages to build websites, apps and games.</p>
+        </section>
+
+        <section class="slide" id="elements-videos">
+          <h2>Scratch Overview Video</h2>
+          <iframe src="http://player.vimeo.com/video/29457909?title=0&amp;byline=0&amp;portrait=0" width="500" height="281" frameborder="0"></iframe>
+        </section>
+
+        <section class="slide" id="scratch-signin">
+          <h2>Sign in at Scratch</h2>
+          <img src="images/scratch_signin.jpg" alt="scratch-signin">
+        </section>
+
+        <!-- deck.navigation snippet -->
+        <div aria-role="navigation">
+          <a href="#" class="deck-prev-link" title="Previous">&#8592;</a>
+          <a href="#" class="deck-next-link" title="Next">&#8594;</a>
+        </div>
+
+        <!-- deck.status snippet -->
+        <p class="deck-status" aria-role="status">
+          <span class="deck-status-current"></span>
+          /
+          <span class="deck-status-total"></span>
+        </p>
+
+        <!-- deck.goto snippet -->
+        <form action="." method="get" class="goto-form">
+          <label for="goto-slide">Go to slide:</label>
+          <input type="text" name="slidenum" id="goto-slide" list="goto-datalist">
+          <datalist id="goto-datalist"></datalist>
+          <input type="submit" value="Go">
+        </form>
+      </div>
+
+      <script src="../jquery.min.js"></script>
+
+      <!-- Deck Core and extensions -->
+      <script src="../core/deck.core.js"></script>
+      <script src="../extensions/menu/deck.menu.js"></script>
+      <script src="../extensions/goto/deck.goto.js"></script>
+      <script src="../extensions/status/deck.status.js"></script>
+      <script src="../extensions/navigation/deck.navigation.js"></script>
+      <script src="../extensions/scale/deck.scale.js"></script>
+
+      <!-- Initialize the deck -->
+      <script>
+        $(function() {
+          $.deck('.slide');
+        });
+      </script>
+
+    </body>
+    </html>
