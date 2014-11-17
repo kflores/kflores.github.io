@@ -7,7 +7,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
-  <title>CoderDojo Indigo - November 2014</title>
+  <title>CoderDojo Indigo - Build a Basic Platform Game</title>
 
   <meta name="description" content="A jQuery library for modern HTML presentations">
   <meta name="author" content="Caleb Troughton">
@@ -37,38 +37,229 @@
   <div class="deck-container">
 
     <!-- Begin slides -->
-    <section class="slide" id="title-slide">
-      <h1>CoderDojo Indigo - November 2014</h1>
-    </section>
 
     <section class="slide" id="how-to-overview">
       <h2>Build a Basic Platform Game</h2>
       <ol>
         <li>
-          <h3>Platform Game Template</h3>
-          <p>Remix "Platform 1.0" from our studio: <a href="http://scratch.mit.edu/studios/585122/" target="_blank">http://scratch.mit.edu/studios/585122/</a></p>
+          <p>Make our character Sprite run left and right with Arrow keys</p>
         </li>
         <li>
-          <h3>Sprite Animation</h3>
-          <p>We'll make our Sprite have basic motion - run left and right and jump.</p>
+          <p>Make our character Sprite jump on platforms with the Space key</p>
         </li>
         <li>
-          <h3>Platform Events</h3>
-          <p>We'll make our sprite interact with platforms and obstacles using collision detection.</p>
+          <p>Let character Sprite fall if NOT touching a platform</p>
+        </li>
+        <li>
+          <p>Add a moving platform and a Lava Pit obstacle</p>
+        </li>
+        <li>
+          <p>Let our character Sprite reach the Portal to advance to the next Level</p>
+        </li>
+        <li>
+          <p>Use a Variable and Broadcast message to manage Levels and know when the player wins by getting past the last level</p>
+        </li>
+        <li>
+          <p>See a list of Challenges to improve the game on your own</p>
         </li>
       </ol>
     </section>
 
-    <section class="slide" id="elements-images">
-      <h2>Maze Sprite Scripts</h2>
-      <img src="maze_sprite_scripts.png" alt="Maze Sprite Scripts">
-      <pre>Adding Scripts here...</pre>
+    <section class="slide" id="scratch-signin">
+      <h2>Sign in at Scratch</h2>
+      <p>Go To: <strong><a href="http://scratch.mit.edu/" target="_blank">http://scratch.mit.edu/</a></strong></p>
+      <img src="../overview/images/scratch_signin.jpg" alt="scratch-signin">
     </section>
 
-    <section class="slide" id="elements-images">
-      <h2>Maze Coin Scripts</h2>
-      <img src="maze_coin_scripts.png" alt="Maze Coin Scripts">
-      <pre>Adding more Scripts here...</pre>
+    <section class="slide" id="coder-dojo-indigo">
+      <h2>CoderDojo Indigo Studio</h2>
+      <p>Go To: <strong><a href="http://scratch.mit.edu/studios/585122/" target="_blank">http://scratch.mit.edu/studios/585122/</a></strong> and click <strong>Platform Game (Starter)</strong></p>
+      <img src="images/03_studio_project.png" alt="CoderDojo Indigo">
+    </section>
+
+    <section class="slide" id="see-inside">
+      <h2>Click the "See inside" button</h2>
+      <p>Notice the sections: <strong>Title</strong>, <strong>Instructions</strong> and <strong>Notes and Credits</strong></p>
+      <img src="images/04_project_see_inside.png" alt="see-inside">
+    </section>
+
+    <section class="slide" id="remix">
+      <h2>Click the "Remix" button</h2>
+      <p>This will make a copy of the project under your name</p>
+      <img src="images/05_project_remix.png" alt="remix">
+    </section>
+
+    <section class="slide" id="rename">
+      <h2>Rename the Project</h2>
+      <p>It's a good practice to name your project something unique</p>
+      <img src="images/06_project_rename.png" alt="rename">
+    </section>
+
+
+    <section class="slide" id="left-right">
+      <h2>Sprite Control with Keys</h2>
+      <p>Code your sprite to move left and right with arrow keys</p>
+      <img src="images/07_sprite_left_right.png" alt="left-right">
+    </section>
+
+    <section class="slide" id="sprite-orientation">
+      <h2>Fix Sprite Orientation</h2>
+      <p>Set left/right orientation and add "point in direction" code blocks</p>
+      <img src="images/08_sprite_rotation.png" alt="sprite-orientation">
+    </section>
+
+    <section class="slide" id="sprite-next-costume">
+      <h2>Simple Sprite Animation</h2>
+      <p>Add "wait" and "next costume" code blocks</p>
+      <img src="images/09_next_costume.png" alt="sprite-next-costume">
+    </section>
+
+    <section class="slide" id="sprite-jump">
+      <h2>Sprite Jump Control</h2>
+      <p>Code blocks to set start location, "space" key press, sound and upward motion</p>
+      <img src="images/10_sprite_jump.png" alt="sprite-jump">
+    </section>
+
+    <section class="slide" id="sprite-fall">
+      <h2>Sprite should Respect Gravity!</h2>
+      <p>Your Sprite should fall if NOT on a platform; use a <strong>"not" Operator</strong></p>
+      <img src="images/11_sprite_gravity.png" alt="sprite-fall">
+    </section>
+
+    <section class="slide" id="jump-platform">
+      <h2>Jump only from a Surface</h2>
+      <p>Add this new rule for your Sprite with an <strong>"and" Operator</strong></p>
+      <img src="images/12_sprite_jump_only_from_platform.png" alt="jump-platform">
+    </section>
+
+    <section class="slide" id="moving-platform">
+      <h2>Add a Moving Platform</h2>
+      <p>Add a starting point, "show" block and a "forever" loop</p>
+      <img src="images/13_moving_platform.png" alt="moving-platform">
+    </section>
+
+    <section class="slide" id="variable">
+      <h2>Add a Variable for "Level"</h2>
+      <p>Click back on "Giga" Sprite; Data -> Make a Variable; name it "Level"</p>
+      <img src="images/14_level_variable.png" alt="variable">
+    </section>
+
+    <section class="slide" id="set-variable">
+      <h2>Set your "Level" Variable</h2>
+      <p>You can move your variable on stage; Add "set variable" block to a start block</p>
+      <img src="images/15_set_level.png" alt="set-variable">
+    </section>
+
+    <section class="slide" id="portal-advance">
+      <h2>Get to the Portal!</h2>
+      <p>This code block checks for Sprite touching "Portal", then increments the "Level" variable and moves Sprite back to start location</p>
+      <img src="images/16_sprite_reaches_portal.png" alt="portal-advance">
+    </section>
+
+    <section class="slide" id="portal-color">
+      <h2>A more Interesting Portal</h2>
+      <p>Select the "Portal" Sprite; Add code block to change color forever</p>
+      <img src="images/17_portal_color_cycle.png" alt="portal-color">
+    </section>
+
+    <section class="slide" id="broadcast-message">
+      <h2>Broadcast Message</h2>
+      <p>Select "Giga" Sprite; Add a "Broadcast message block"; Select "new message..."</p>
+      <img src="images/18_broadcast_1.png" alt="broadcast-message">
+    </section>
+
+    <section class="slide" id="message-name">
+      <h2>Broadcast Message</h2>
+      <p>Name the message "NewLevel" and click "OK"; You will tell other sprites to listen for this message...</p>
+      <img src="images/19_broadcast_2.png" alt="message-name">
+    </section>
+
+    <section class="slide" id="stage-backdrops">
+      <h2>Stage Backdrops</h2>
+      <p>Peek at Backdrops tab, then add code blocks to switch backdrops at start and when it hears the "Newlevel" message</p>
+      <img src="images/20_stage_backdrops.png" alt="stage-backdrops">
+    </section>
+
+    <section class="slide" id="platform-costumes">
+      <h2>"Platforms" Sprite Costumes</h2>
+      <p>Select the "Platforms" Sprite; Look at the Costumes tab<br />(Note: the "Levels" could have been drawn right on Stage backdrops)</p>
+      <img src="images/21_platform_costumes.png" alt="platform-costumes">
+    </section>
+
+    <section class="slide" id="platform-costumes">
+      <h2>"Platforms" Costume Updates</h2>
+      <p>Set the "Platforms" Sprite to listen for the "NewLevel" message and switch costumes depending on the Level</p>
+      <img src="images/22_platform_broadcast_switches.png" alt="platform-costumes">
+    </section>
+
+    <section class="slide" id="moving-platform-location">
+      <h2>"Moving Platform" Locations</h2>
+      <p>Set the "Moving Platform" Sprite to listen for the "NewLevel" message and change its location depending on the Level</p>
+      <img src="images/23_moving_platform_locations.png" alt="moving-platform-location">
+    </section>
+
+    <section class="slide" id="hide-portal">
+      <h2>Hide the "Portal" at the End</h2>
+      <p>Set the "Portal" Sprite to listen for the "NewLevel" message and hide itself at the end; This is why we added a "show" block upon start</p>
+      <img src="images/24_portal_hide.png" alt="hide-portal">
+    </section>
+
+    <section class="slide" id="obstacle">
+      <h2>The Lava Pit Sprite was Hiding</h2>
+      <p>Select "Danger1" Sprite; Click the "Info" icon and check the "show: " box</p>
+      <img src="images/25_show_obstacle.png" alt="obstacle">
+    </section>
+
+   <section class="slide" id="obstacle-show">
+      <h2>The Lava Pit Sprite Animation</h2>
+      <p>Add code blocks to animate costumes and "show" on Level 2 only (if-then-else)</p>
+      <img src="images/26_obstacle_show_or_hide.png" alt="obstacle-show">
+    </section>
+
+   <section class="slide" id="obstacle-collision">
+      <h2>What Happens if Character hits Lava Pit?</h2>
+      <p>Right now, nothing!  We need to code that back on the "Giga" Sprite!</p>
+      <img src="images/27_obstacle_collision.png" alt="obstacle-collision">
+    </section>
+
+   <section class="slide" id="you-won">
+      <h2>Finishing the Game</h2>
+      <p>We only created 3 Levels; so the last backdrop is "You Won" and all Sprites are hidden with our "NextLevel" message and Level = 4 code logic (except for "Giga").</p>
+      <img src="images/28_you_won.png" alt="you-won">
+    </section>
+
+    <section class="slide" id="challenges">
+      <h2>Congratulations!</h2>
+      <p>Here are a few Challenges:</p>
+      <ol>
+        <li>
+          <p>Build more levels (backgrounds, platforms, obstacles)</p>
+        </li>
+        <li>
+          <p>Add special platforms (springs or transporters)</p>
+        </li>
+        <li>
+          <p>Create a variable to track number of lives and end of game</p>
+        </li>
+        <li>
+          <p>Add items to pick up for points or more lives</p>
+        </li>
+        <li>
+          <p>Add music or more sound effects</p>
+        </li>
+        <li>
+          <p>Add velocity for more realistic Sprite movement</p>
+        </li>
+        <li>
+          <p>Add a "Start Over" button</p>
+        </li>
+      </ol>
+    </section>
+
+    <section class="slide" id="add-project">
+      <h2>Share and Add Project to Studio</h2>
+      <p>Go To: <strong><a href="http://scratch.mit.edu/studios/585122/" target="_blank">http://scratch.mit.edu/studios/585122/</a></strong> and click <strong>Add Projects</strong></p>
+      <img src="images/30_add_project_to_studio.png" alt="add-project">
     </section>
 
     <!-- deck.navigation snippet -->
@@ -93,22 +284,22 @@
     </form>
   </div>
 
-<script src="../jquery.min.js"></script>
+  <script src="../jquery.min.js"></script>
 
-<!-- Deck Core and extensions -->
-<script src="../core/deck.core.js"></script>
-<script src="../extensions/menu/deck.menu.js"></script>
-<script src="../extensions/goto/deck.goto.js"></script>
-<script src="../extensions/status/deck.status.js"></script>
-<script src="../extensions/navigation/deck.navigation.js"></script>
-<script src="../extensions/scale/deck.scale.js"></script>
+  <!-- Deck Core and extensions -->
+  <script src="../core/deck.core.js"></script>
+  <script src="../extensions/menu/deck.menu.js"></script>
+  <script src="../extensions/goto/deck.goto.js"></script>
+  <script src="../extensions/status/deck.status.js"></script>
+  <script src="../extensions/navigation/deck.navigation.js"></script>
+  <script src="../extensions/scale/deck.scale.js"></script>
 
-<!-- Initialize the deck -->
-<script>
-$(function() {
-  $.deck('.slide');
-});
-</script>
+  <!-- Initialize the deck -->
+  <script>
+    $(function() {
+      $.deck('.slide');
+    });
+  </script>
 
 </body>
 </html>
