@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="no-js ie6" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!-->  <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  <title>CoderDojo Indigo - Santa Delivery Game</title>
+
+  <meta name="description" content="A jQuery library for modern HTML presentations">
+  <meta name="author" content="Caleb Troughton">
+  <meta name="viewport" content="width=1024, user-scalable=no">
+
+  <!-- Core and extension CSS files -->
+  <link rel="stylesheet" media="screen" href="../core/deck.core.css">
+  <link rel="stylesheet" media="screen" href="../extensions/goto/deck.goto.css">
+  <link rel="stylesheet" media="screen" href="../extensions/menu/deck.menu.css">
+  <link rel="stylesheet" media="screen" href="../extensions/navigation/deck.navigation.css">
+  <link rel="stylesheet" media="screen" href="../extensions/status/deck.status.css">
+  <link rel="stylesheet" media="screen" href="../extensions/scale/deck.scale.css">
+
+  <!-- Style theme. More available in /themes/style/ or create your own. -->
+  <link rel="stylesheet" media="screen" href="../themes/style/swiss.css">
+
+  <!-- Transition theme. More available in /themes/transition/ or create your own. -->
+  <link rel="stylesheet" media="screen" href="../themes/transition/horizontal-slide.css">
+
+  <!-- Basic black and white print styles -->
+  <link rel="stylesheet" media="print" href="../core/print.css">
+
+  <script src="../modernizr.custom.js"></script>
+</head>
+
+<body>
+  <div class="deck-container">
+
+    <!-- Begin slides -->
+
+    <section class="slide" id="how-to-overview">
+      <h2>Santa Delivery Scroller Game</h2>
+      <ol>
+        <li>
+          <p>Make Santa Sleigh Sprite fly left and right with Arrow keys</p>
+        </li>
+        <li>
+          <p>Make the background mountains continuously scroll left</p>
+        </li>
+        <li>
+          <p>Make House Sprite scroll left at variable speed</p>
+        </li>
+        <li>
+          <p>Make Snowman Sprite scroll left at variable speed</p>
+        </li>
+        <li>
+          <p>Have Santa Sprite drop presents with the Space key</p>
+        </li>
+        <li>
+          <p>Drop Presents on houses for points and to squash Snowmen just for fun!</p>
+        </li>
+        <li>
+          <p>Show Ending Message and Score when game ends (25 houses pass by)</p>
+        </li>
+      </ol>
+    </section>
+
+    <section class="slide" id="scratch-signin">
+      <h2>Sign in at Scratch</h2>
+      <p>Go To: <strong><a href="http://scratch.mit.edu/" target="_blank">http://scratch.mit.edu/</a></strong></p>
+      <img src="../overview/images/scratch_signin.jpg" alt="scratch-signin">
+    </section>
+
+    <section class="slide" id="coder-dojo-indigo">
+      <h2>CoderDojo Indigo Studio</h2>
+      <p>Go To: <strong><a href="http://scratch.mit.edu/studios/585122/" target="_blank">http://scratch.mit.edu/studios/585122/</a></strong> and click <strong>Santa Delivery (Starter)</strong></p>
+      <img src="images/03_studio_project.png" alt="CoderDojo Indigo">
+    </section>
+
+    <section class="slide" id="see-inside">
+      <h2>Click the "See inside" button</h2>
+      <p>Notice the sections: <strong>Title</strong>, <strong>Instructions</strong> and <strong>Notes and Credits</strong></p>
+      <img src="images/04_project_see_inside.png" alt="see-inside">
+    </section>
+
+    <section class="slide" id="remix">
+      <h2>Click the "Remix" button</h2>
+      <p>This will make a copy of the project under your name</p>
+      <img src="images/05_project_remix.png" alt="remix">
+    </section>
+
+    <section class="slide" id="rename">
+      <h2>Rename the Project</h2>
+      <p>It's a good practice to name your project something unique</p>
+      <img src="images/06_project_rename.png" alt="rename">
+    </section>
+
+
+    <section class="slide" id="music-loop">
+      <h2>Music Loop</h2>
+      <p>Shortcut: You already have looping music code attached to your Stage!</p>
+      <img src="images/07_music_loop.png" alt="music-loop">
+    </section>
+
+    <section class="slide" id="santa-move">
+      <h2>Santa Sleigh Control with Keys</h2>
+      <p>Shortcut: Rotation, Direction and Arrow keys control already coded...</p>
+      <img src="images/08_santa_move.png" alt="santa-move">
+    </section>
+
+    <section class="slide" id="background-scroll0">
+      <h2>Multi-Sprite Scroll Technique</h2>
+      <p>Use 2 or more sprites animated at matched speed, but offset...<br \>
+      When moving sprite gets to its own end, it jumps back to other side.</p>
+      <img src="images/09_multi_sprite_scroll.png" alt="background-scroll0">
+    </section>
+
+    <section class="slide" id="background-scroll1">
+      <h2>Multi-Sprite Scroll Technique</h2>
+      <p>Use 2 or more sprites animated at matched speed, but offset...<br \>
+       Mountains Sprite continuously scroll left (start x = 0), then loop.</p>
+       <img src="images/10_mountains_1.png" alt="background-scroll1">
+     </section>
+
+     <section class="slide" id="background-scroll2">
+      <h2>Multi-Sprite Scroll Technique</h2>
+      <p>Use 2 or more sprites animated at matched speed, but offset...<br \>
+       Mountains2 Sprite continuously scroll left (start x = 480), then loop.</p>
+       <img src="images/11_mountains_2.png" alt="background-scroll2">
+     </section>        
+
+     <section class="slide" id="house-move">
+      <h2>We Need Houses!</h2>
+      <p>Set up a few variables.  Make House Sprite scroll left and loop... but it's too easy!</p>
+      <img src="images/12_house_move.png" alt="house-move">
+    </section>
+
+    <section class="slide" id="house-delay">
+      <h2>Variability: Random Wait Delay</h2>
+      <p>Set a random number of seconds (1-4) to wait before a new house comes.</p>
+      <img src="images/13_house_wait.png" alt="house-delay">
+    </section>
+
+    <section class="slide" id="house-speed">
+      <h2>Variability: House Speed</h2>
+      <p>We'll use the "modulo" (mod) math function to set house speed.</p>
+      <img src="images/14_house_speed.png" alt="house-speed">
+    </section>
+
+    <section class="slide" id="snowman-move">
+      <h2>Do You Want to Move a Snowman?</h2>
+      <p>We'll use a slightly different technique to move our Snowman (and loop). (Note: multiply by -1 to move the Sprite Left.)</p>
+      <img src="images/15_snowman_move.png" alt="snowman-move">
+    </section>
+
+    <section class="slide" id="present-setup">
+      <h2>Set up the Present Drop Position</h2>
+      <p>Initiatize PresentsDelivered variable count.  Make a new Present always drop from Santa's sleight with Space key. (Note: Offset x position based on sleigh direction.)</p>
+      <img src="images/16_present_set_up.png" alt="present-setup">
+    </section>
+
+    <section class="slide" id="present-drop">
+      <h2>"Drop" the Present!</h2>
+      <p>Make the present fall (- y movement) with a repeat loop UNTIL a condition is met (touches house roof color OR gets to bottom of screen).</p>
+      <img src="images/17_present_drop.png" alt="present-drop">
+    </section>
+
+    <section class="slide" id="present-score">
+      <h2>Did the Present get to the House?</h2>
+      <p>If the Present DID hit the target house color, play a sound and add +1 to PresentsDelivered variable count. (Always hide the Present Sprite after!)</p>
+      <img src="images/18_present_score.png" alt="present-score">
+    </section>
+
+    <section class="slide" id="snowman-squash">
+      <h2>Squash the Snowman!</h2>
+      <p>Go back to the Snowman Sprite and add a few code blocks to squash him when hit with a Present! (Just for mischievous fun!)</p>
+      <img src="images/19_snowman_squash.png" alt="snowman-squash">
+    </section>
+
+
+    <section class="slide" id="broadcast-end">
+      <h2>Remember the Broadcast?</h2>
+      <p>Back on the House Sprite, you should have already added a "GameOver" broadcast message after 25 houses passed.</p>
+      <img src="images/20_broadcast.png" alt="broadcast-end">
+    </section>
+
+    <section class="slide" id="gameover-message">
+      <h2>Let's Listen for the Broadcast</h2>
+      <p>The EndMessage Sprite will hide itself and the PresentsDelivered variable at Start and show both when it receives the "GameOver" broadcast.</p>
+      <img src="images/21_end_message.png" alt="gameover-message">
+    </section>
+
+    <section class="slide" id="challenges">
+      <h2>Congratulations!</h2>
+      <p>You built a scrolling game! Now, here are a few <strong>Challenges</strong>:</p>
+      <ol>
+        <li>
+          <p>Make new costumes to animate Santa and Rudolf as they fly</p>
+        </li>
+        <li>
+          <p>Make new costumes for different types of houses</p>
+        </li>
+        <li>
+          <p>Come up with a better way to display score and decide when game will end</p>
+        </li>
+        <li>
+          <p>Look for "1 Sprite 1 Script" (1S1S) Costume / Stamp methods for background scrolling</p>
+        </li>
+        <li>
+          <p>Add a "Start Over" button</p>
+        </li>
+      </ol>
+      <p>If you got stuck anywhere, see the completed project with comments here: <a href="http://scratch.mit.edu/projects/36762558/" target="_blank">http://scratch.mit.edu/projects/36762558/</a>!</p>
+    </section>
+
+    <!-- deck.navigation snippet -->
+    <div aria-role="navigation">
+      <a href="#" class="deck-prev-link" title="Previous">&#8592;</a>
+      <a href="#" class="deck-next-link" title="Next">&#8594;</a>
+    </div>
+
+    <!-- deck.status snippet -->
+    <p class="deck-status" aria-role="status">
+      <span class="deck-status-current"></span>
+      /
+      <span class="deck-status-total"></span>
+    </p>
+
+    <!-- deck.goto snippet -->
+    <form action="." method="get" class="goto-form">
+      <label for="goto-slide">Go to slide:</label>
+      <input type="text" name="slidenum" id="goto-slide" list="goto-datalist">
+      <datalist id="goto-datalist"></datalist>
+      <input type="submit" value="Go">
+    </form>
+  </div>
+
+  <script src="../jquery.min.js"></script>
+
+  <!-- Deck Core and extensions -->
+  <script src="../core/deck.core.js"></script>
+  <script src="../extensions/menu/deck.menu.js"></script>
+  <script src="../extensions/goto/deck.goto.js"></script>
+  <script src="../extensions/status/deck.status.js"></script>
+  <script src="../extensions/navigation/deck.navigation.js"></script>
+  <script src="../extensions/scale/deck.scale.js"></script>
+
+  <!-- Initialize the deck -->
+  <script>
+    $(function() {
+      $.deck('.slide');
+    });
+  </script>
+
+</body>
+</html>
