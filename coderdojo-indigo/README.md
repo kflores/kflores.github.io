@@ -1,3 +1,3 @@
 #CoderDojo Indigo
 
-This is the home for project files of CoderDojo Indigo.
+This is the home for the CoderDojo Indigo microsite and session project files.
