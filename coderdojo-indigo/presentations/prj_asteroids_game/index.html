@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="no-js ie6" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!-->  <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  <title>CoderDojo Indigo - The Asteroid Belt! Game</title>
+
+  <meta name="description" content="A jQuery library for modern HTML presentations">
+  <meta name="author" content="Caleb Troughton">
+  <meta name="viewport" content="width=1024, user-scalable=no">
+
+  <!-- Core and extension CSS files -->
+  <link rel="stylesheet" media="screen" href="../core/deck.core.css">
+  <link rel="stylesheet" media="screen" href="../extensions/goto/deck.goto.css">
+  <link rel="stylesheet" media="screen" href="../extensions/menu/deck.menu.css">
+  <link rel="stylesheet" media="screen" href="../extensions/navigation/deck.navigation.css">
+  <link rel="stylesheet" media="screen" href="../extensions/status/deck.status.css">
+  <link rel="stylesheet" media="screen" href="../extensions/scale/deck.scale.css">
+
+  <!-- Style theme. More available in /themes/style/ or create your own. -->
+  <link rel="stylesheet" media="screen" href="../themes/style/swiss.css">
+
+  <!-- Transition theme. More available in /themes/transition/ or create your own. -->
+  <link rel="stylesheet" media="screen" href="../themes/transition/horizontal-slide.css">
+
+  <!-- Basic black and white print styles -->
+  <link rel="stylesheet" media="print" href="../core/print.css">
+
+  <script src="../modernizr.custom.js"></script>
+</head>
+
+<body>
+  <div class="deck-container">
+
+    <!-- Begin slides -->
+
+    <section class="slide" id="how-to-overview">
+      <h2>The Asteroid Belt! Game</h2>
+      <p>Build upon a few techniques we learned in past CoderDojo sessions!</p>
+      <ol>
+        <li>
+          <p>Make Ship sprite fly all around with Arrow keys</p>
+        </li>
+        <li>
+          <p>Make the background Starfield continuously scroll left</p>
+        </li>
+        <li>
+          <p>Clone animated Asteroids for the Ship to dodge (using a custom function block)</p>
+        </li>
+        <li>
+          <p>Keep track of Asteroids passed with a Score counter</p>
+        </li>
+        <li>
+          <p>Create a Lives counter and offer a life PowerUp (clone)</p>
+        </li>
+        <li>
+          <p>Provide a "Start Game" screen and feature via broadcast</p>
+        </li>
+      </ol>
+      <p>Don't forget to run your game after each step!</p>
+    </section>
+
+    <section class="slide" id="scratch-signin">
+      <h2>Sign in at Scratch</h2>
+      <p>Go To: <strong><a href="http://scratch.mit.edu/" target="_blank">http://scratch.mit.edu/</a></strong></p>
+      <img src="../overview/images/scratch_signin.jpg" alt="scratch-signin">
+    </section>
+
+    <section class="slide" id="coder-dojo-indigo">
+      <h2>CoderDojo Indigo Studio</h2>
+      <p>Go To: <strong><a href="http://scratch.mit.edu/studios/585122/" target="_blank">http://scratch.mit.edu/studios/585122/</a></strong> and click <strong>The Asteroid Belt (STARTER)</strong></p>
+      <img src="images/03_studio_project.png" alt="CoderDojo Indigo">
+    </section>
+
+    <section class="slide" id="see-inside">
+      <h2>Click the "See inside" button</h2>
+      <p>Notice the sections: <strong>Title</strong>, <strong>Instructions</strong> and <strong>Notes and Credits</strong></p>
+      <img src="images/04_project_see_inside.png" alt="see-inside">
+    </section>
+
+    <section class="slide" id="remix">
+      <h2>Click the "Remix" button</h2>
+      <p>This will make a copy of the project under your name</p>
+      <img src="images/05_project_remix.png" alt="remix">
+    </section>
+
+    <section class="slide" id="rename">
+      <h2>Rename the Project</h2>
+      <p>It's a good practice to name your project something unique</p>
+      <img src="images/06_project_rename.png" alt="rename">
+    </section>
+
+
+    <section class="slide" id="music-loop">
+      <h2>Music Loop</h2>
+      <p>Shortcut: You already have looping sound code attached to your Stage!</p>
+      <img src="images/07_music_loop.png" alt="music-loop">
+    </section>
+
+    <section class="slide" id="santa-move">
+      <h2>Ship Control with Keys</h2>
+      <p>Shortcut: Rotation, Direction and Arrow keys control already coded. (Note: next costume + Speed variable)</p>
+      <img src="images/08_ship_move.png" alt="ship-move">
+    </section>
+
+    <section class="slide" id="background-scroll0">
+      <h2>Multi-Sprite Scroll Technique</h2>
+      <p>Use 2 or more sprites animated at matched speed, but offset...<br \>
+      When moving sprite gets to its own end, it jumps back to other side.</p>
+      <img src="images/09_multi_sprite_scroll.png" alt="background-scroll0">
+    </section>
+
+    <section class="slide" id="background-scroll1">
+      <h2>Multi-Sprite Scroll Technique</h2>
+      <p>Use 2 or more sprites animated at matched speed, but offset...<br \>
+       Starfield1 sprite continuously scroll left (start x = 0), then loop.</p>
+       <img src="images/10_starfield1.png" alt="background-scroll1">
+     </section>
+
+     <section class="slide" id="background-scroll2">
+      <h2>Multi-Sprite Scroll Technique</h2>
+      <p>Use 2 or more sprites animated at matched speed, but offset...<br \>
+       Starfield2 sprite continuously scroll left (start x = 465), then loop.</p>
+       <img src="images/11_starfield2.png" alt="background-scroll2">
+     </section>        
+
+    <section class="slide" id="clone-1">
+      <h2>We Need Asteroids!</h2>
+      <p>Set up our Score variable.  Let's start cloning Asteroids (every 1 second); Where are they?</p>
+      <img src="images/12_clone_1.png" alt="clone-1">
+    </section>
+
+    <section class="slide" id="clone-2">
+      <h2>Tell each Clone what to do...</h2>
+      <p>Where it should start; show itself; move across screen; increment score; delete itself!</p>
+      <img src="images/13_clone_2.png" alt="clone-2">
+    </section>   
+
+    <section class="slide" id="collision">
+      <h2>Now you need to let your Ship crash...</h2>
+      <p>Use a sensing block to detect the collision between Ship and Asteroid, broadcast an "Explosion" message; then delete the clone.</p>
+      <img src="images/14_collision.png" alt="collision">
+    </section>  
+
+    <section class="slide" id="explosion">
+      <h2>Set up an explosion...</h2>
+      <p>Hide on start; Receive the "Explosion" message, play a sound, go to the ship and cycle costumes (at the front layer); then hide.  Is our ship indestructible?!?</p>
+      <img src="images/15_explosion.png" alt="explosion">
+    </section>  
+
+    <section class="slide" id="reset_1">
+      <h2>Broadcast a "ResetShip" message</h2>
+      <p>Set up a broadcast on the "Explosion" sprite to tell the Ship what to do...</p>
+      <img src="images/16_reset_ship_1.png" alt="reset_1">
+    </section>  
+
+    <section class="slide" id="reset_2">
+      <h2>The Ship should listen to both broadcasts</h2>
+      <p>Hide upon "Explosion" (destroyed); A new ship should appear at the starting position upon "ResetShip"...</p>
+      <img src="images/17_reset_ship_2.png" alt="reset_2">
+    </section>  
+
+    <section class="slide" id="lives_1">
+      <h2>Let's set up our Lives counter</h2>
+      <p>Check out this sprite's costumes.  Start with 3 lives.  If Lives reduces to 0, end the game with a broadcast and stop all scripts command.</p>
+      <img src="images/18_lives_setup.png" alt="lives_1">
+    </section> 
+
+    <section class="slide" id="lives_2">
+      <h2>Lose a life upon "Explosion" broadcast</h2>
+      <p>When "Explosion" is broadcast, reduce Lives counter by 1; Switch costume to specific number (= to lives remaining).</p>
+      <img src="images/19_lives_decrement.png" alt="lives_2">
+    </section> 
+
+    <section class="slide" id="lives_3">
+      <h2>Power Up: Extra Life!</h2>
+      <p>Offer a PowerUp clone every 20 seconds.  Shortcut: Reuse "most" of the clone code from the Asteroids sprite. Add the broadcast "PowerUp" and a sound effect.</p>
+      <img src="images/20_lives_increment_1.png" alt="lives_3">
+    </section> 
+
+    <section class="slide" id="lives_4">
+      <h2>Now count the PowerUp...</h2>
+      <p>Our Lives sprite needs to receive the "PowerUp" message and add +1 to the Lives counter and a life to the sprite display.  (Set a Maximum = 5).</p>
+      <img src="images/21_lives_increment_2.png" alt="lives_4">
+    </section> 
+
+    <section class="slide" id="animate_1">
+      <h2>Animate the Small Asteroid</h2>
+      <p>Let's add some polish by animating the "Small" Asteroid (Look at the sprite's costumes.) We'll come back to more asteroids, later...</p>
+      <img src="images/22_small_asteroid.png" alt="animate_1">
+    </section> 
+
+    <section class="slide" id="startscreen_1">
+      <h2>Let's set up a Start Screen</h2>
+      <p>This will become the ONLY sprite with a "Green Flag Start" block... NOTE: Your game will be "broken" for a few steps!</p>
+      <img src="images/23_start_screen.png" alt="startscreen_1">
+    </section> 
+
+
+    <section class="slide" id="startscreen_1">
+      <h2>Ship set up upon "StartGame" message</h2>
+      <p>Replace the "Green Flag Start" block on the Ship sprite with the receive "StartGame" message block...</p>
+      <img src="images/24_startgame_ship.png" alt="startscreen_1">
+    </section> 
+
+    <section class="slide" id="startscreen_2">
+      <h2>Asteroids set up upon "StartGame" message</h2>
+      <p>Replace the "Green Flag Start" block on the Asteroids sprite with the receive "StartGame" message block...</p>
+      <img src="images/25_startgame_asteroids.png" alt="startscreen_2">
+    </section> 
+
+    <section class="slide" id="startscreen_3">
+      <h2>Explosion set up upon "StartGame" message</h2>
+      <p>Replace the "Green Flag Start" block on the Explosion sprite with the receive "StartGame" message block...</p>
+      <img src="images/26_startgame_explosion.png" alt="startscreen_3">
+    </section> 
+
+    <section class="slide" id="startscreen_4">
+      <h2>Lives set up upon "StartGame" message</h2>
+      <p>Replace the "Green Flag Start" block on the Lives sprite with the receive "StartGame" message block...</p>
+      <img src="images/27_startgame_lives.png" alt="startscreen_4">
+    </section> 
+
+    <section class="slide" id="startscreen_5">
+      <h2>PowerUp set up upon "StartGame" message</h2>
+      <p>Replace the "Green Flag Start" block on the PowerUp sprite with the receive "StartGame" message block...</p>
+      <img src="images/28_startgame_powerup.png" alt="startscreen_5">
+    </section> 
+
+    <section class="slide" id="startscreen_6">
+      <h2>Starfield1 set up upon "StartGame" message</h2>
+      <p>Replace the "Green Flag Start" block on the Starfield1 sprite with the receive "StartGame" message block...</p>
+      <img src="images/29_startgame_starfield1.png" alt="startscreen_6">
+    </section> 
+
+    <section class="slide" id="startscreen_7">
+      <h2>Starfield2 set up upon "StartGame" message</h2>
+      <p>Replace the "Green Flag Start" block on the Starfield2 sprite with the receive "StartGame" message block...</p>
+      <img src="images/30_startgame_starfield2.png" alt="startscreen_7">
+    </section> 
+
+    <section class="slide" id="define_asteroid">
+      <h2>Add more Asteroid types with a custom function block</h2>
+      <p>Create an "Asteroid" function block with "Name" string input and "LastNumber" number input.</p>
+      <img src="images/31_create_asteroid_block.png" alt="define_asteroid">
+    </section> 
+
+    <section class="slide" id="define_asteroid">
+      <h2>Define your Asteroid function block</h2>
+      <p>Move your asteroid clone code to the function block.  Replace hard-coded values with variables.</p>
+      <img src="images/32_define_asteroid_block.png" alt="define_asteroid">
+    </section> 
+
+    <section class="slide" id="define_asteroid">
+      <h2>Use the Asteroid function in your Asteroid clone instructions</h2>
+      <p>Add some randomness (Asteroid 1, 2, or 3); Use the Asteroid block with correct variables.</p>
+      <img src="images/33_updated_asteroid_clones.png" alt="define_asteroid">
+    </section> 
+
+    <section class="slide" id="challenges">
+      <h2>Congratulations!</h2>
+      <p>You built a cool Asteroids game! Now, here are a few <strong>Challenges</strong>:</p>
+      <ol>
+        <li>
+          <p>Make the Speed variable also affect the speed of the Asteroids and bonus life PowerUp</p>
+        </li>
+        <li>
+          <p>Give your ship lasers to blast the Asteroids!</p>
+        </li>
+      </ol>
+      <p>If you got stuck anywhere, see the completed project with comments here: <a href="http://scratch.mit.edu/projects/46744040/" target="_blank">http://scratch.mit.edu/projects/46744040/</a>!</p>
+    </section>
+
+    <!-- deck.navigation snippet -->
+    <div aria-role="navigation">
+      <a href="#" class="deck-prev-link" title="Previous">&#8592;</a>
+      <a href="#" class="deck-next-link" title="Next">&#8594;</a>
+    </div>
+
+    <!-- deck.status snippet -->
+    <p class="deck-status" aria-role="status">
+      <span class="deck-status-current"></span>
+      /
+      <span class="deck-status-total"></span>
+    </p>
+
+    <!-- deck.goto snippet -->
+    <form action="." method="get" class="goto-form">
+      <label for="goto-slide">Go to slide:</label>
+      <input type="text" name="slidenum" id="goto-slide" list="goto-datalist">
+      <datalist id="goto-datalist"></datalist>
+      <input type="submit" value="Go">
+    </form>
+  </div>
+
+  <script src="../jquery.min.js"></script>
+
+  <!-- Deck Core and extensions -->
+  <script src="../core/deck.core.js"></script>
+  <script src="../extensions/menu/deck.menu.js"></script>
+  <script src="../extensions/goto/deck.goto.js"></script>
+  <script src="../extensions/status/deck.status.js"></script>
+  <script src="../extensions/navigation/deck.navigation.js"></script>
+  <script src="../extensions/scale/deck.scale.js"></script>
+
+  <!-- Initialize the deck -->
+  <script>
+    $(function() {
+      $.deck('.slide');
+    });
+  </script>
+
+</body>
+</html>
