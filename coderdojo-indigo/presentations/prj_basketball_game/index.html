@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="no-js ie6" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!-->  <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  <title>CoderDojo Indigo - March Madness Game</title>
+
+  <meta name="description" content="A jQuery library for modern HTML presentations">
+  <meta name="author" content="Caleb Troughton">
+  <meta name="viewport" content="width=1024, user-scalable=no">
+
+  <!-- Core and extension CSS files -->
+  <link rel="stylesheet" media="screen" href="../core/deck.core.css">
+  <link rel="stylesheet" media="screen" href="../extensions/goto/deck.goto.css">
+  <link rel="stylesheet" media="screen" href="../extensions/menu/deck.menu.css">
+  <link rel="stylesheet" media="screen" href="../extensions/navigation/deck.navigation.css">
+  <link rel="stylesheet" media="screen" href="../extensions/status/deck.status.css">
+  <link rel="stylesheet" media="screen" href="../extensions/scale/deck.scale.css">
+
+  <!-- Style theme. More available in /themes/style/ or create your own. -->
+  <link rel="stylesheet" media="screen" href="../themes/style/swiss.css">
+
+  <!-- Transition theme. More available in /themes/transition/ or create your own. -->
+  <link rel="stylesheet" media="screen" href="../themes/transition/horizontal-slide.css">
+
+  <!-- Basic black and white print styles -->
+  <link rel="stylesheet" media="print" href="../core/print.css">
+
+  <script src="../modernizr.custom.js"></script>
+</head>
+
+<body>
+  <div class="deck-container">
+
+    <!-- Begin slides -->
+
+    <section class="slide" id="how-to-overview">
+      <h2>March Madness Basketball Game</h2>
+      <p>Build upon a few techniques we learned in past CoderDojo sessions!</p>
+      <ol>
+        <li>
+          <p>Shoot basketball (clones!) with keyboard control and broadcast messages</p>
+        </li>
+        <li>
+          <p>Animate a sprite with costumes to show a velocity meter</p>
+        </li>
+        <li>
+          <p>Use variables for basketball motion (velocity and gravity)</p>
+        </li>
+        <li>
+          <p>Keep track of baskets completed with a Score counter</p>
+        </li>
+        <li>
+          <p>Determine end of game with a Ball counter</p>
+        </li>
+      </ol>
+    </section>
+
+    <section class="slide" id="scratch-signin">
+      <h2>Sign in at Scratch</h2>
+      <p>Go To: <strong><a href="http://scratch.mit.edu/" target="_blank">http://scratch.mit.edu/</a></strong></p>
+      <img src="../overview/images/scratch_signin.jpg" alt="scratch-signin">
+    </section>
+
+    <section class="slide" id="coder-dojo-indigo">
+      <h2>CoderDojo Indigo Studio</h2>
+      <p>Go To: <strong><a href="http://scratch.mit.edu/studios/585122/" target="_blank">http://scratch.mit.edu/studios/585122/</a></strong> and click <strong>march_madness_starter</strong></p>
+      <img src="images/03_studio_project.png" alt="CoderDojo Indigo">
+    </section>
+
+    <section class="slide" id="see-inside">
+      <h2>Click the "See inside" button</h2>
+      <p>Notice the sections: <strong>Title</strong>, <strong>Instructions</strong> and <strong>Notes and Credits</strong></p>
+      <img src="images/04_project_see_inside.png" alt="see-inside">
+    </section>
+
+    <section class="slide" id="remix">
+      <h2>Click the "Remix" button</h2>
+      <p>This will make a copy of the project under your name</p>
+      <img src="images/05_project_remix.png" alt="remix">
+    </section>
+
+    <section class="slide" id="rename">
+      <h2>Rename the Project</h2>
+      <p>It's a good practice to name your project something unique</p>
+      <img src="images/06_project_rename.png" alt="rename">
+    </section>
+
+    <section class="slide" id="stage">
+      <h2>Select the "Stage" to set it up</h2>
+      <p>Set a Sound script + scripts to show which backdrop to display upon start and end of game</p>
+      <img src="images/07_stage_backdrops.png" alt="stage">
+    </section>
+
+    <section class="slide" id="leprechaun">
+      <h2>Select the "leprechaun" sprite</h2>
+      <p>We want the Leprechaun to shoot from the throw line</p>
+      <img src="images/08_leprechaun.png" alt="leprechaun">
+    </section>
+
+    <section class="slide" id="hoop">
+      <h2>Select the "hoop" sprite</h2>
+      <p>We want the hoop on the backboard and to always remain in front</p>
+      <img src="images/09_hoop.png" alt="hoop">
+    </section>
+
+    <section class="slide" id="basketball1">
+      <h2>Select the "basketball" sprite</h2>
+      <p>Set up all variables and our first clone upon start + what to do as a clone</p>
+      <img src="images/10_basketball_1.png" alt="basketball1">
+    </section>
+
+   <section class="slide" id="basketball2">
+      <h2>Ths is the main basketball script!</h2>
+      <p>When the "Shot" message is received: start the motion, check for the backboard or hoop "collision" and score!</p>
+      <img src="images/11_basketball_2.png" alt="basketball2">
+    </section>
+
+   <section class="slide" id="velocity-meter1">
+      <h2>Select the "Sprite1" sprite (Velocity Meter) - Costumes</h2>
+      <p>Check out the costumes: the different costumes represent the velocity bar that will animate.  We will use the costume # to determine how hard the ball is thrown.</p>
+      <img src="images/12_velocity_meter_1.png" alt="velocity-meter1">
+    </section>
+
+   <section class="slide" id="velocity-meter2">
+      <h2>Select the "Sprite1" sprite (Velocity Meter) - Scripts</h2>
+      <p>Upon receiving the "New Shot" message, the velocity meter will animate costumes until the "space" key is pressed to throw a ball, using the velocity.</p>
+      <img src="images/13_velocity_meter_2.png" alt="velocity-meter2">
+    </section>
+
+
+    <section class="slide" id="challenges">
+      <h2>Congratulations!</h2>
+      <p>You built a cool Basketball game! Now, here are a few <strong>Challenges</strong>:</p>
+      <ol>
+        <li>
+          <p>Add additional costumes for the character when he throws the ball.</p>
+        </li>
+        <li>
+          <p>Allow the character to move left / right and throw the ball at different angles.</p>
+        </li>
+      </ol>
+    </section>
+
+    <!-- deck.navigation snippet -->
+    <div aria-role="navigation">
+      <a href="#" class="deck-prev-link" title="Previous">&#8592;</a>
+      <a href="#" class="deck-next-link" title="Next">&#8594;</a>
+    </div>
+
+    <!-- deck.status snippet -->
+    <p class="deck-status" aria-role="status">
+      <span class="deck-status-current"></span>
+      /
+      <span class="deck-status-total"></span>
+    </p>
+
+    <!-- deck.goto snippet -->
+    <form action="." method="get" class="goto-form">
+      <label for="goto-slide">Go to slide:</label>
+      <input type="text" name="slidenum" id="goto-slide" list="goto-datalist">
+      <datalist id="goto-datalist"></datalist>
+      <input type="submit" value="Go">
+    </form>
+  </div>
+
+  <script src="../jquery.min.js"></script>
+
+  <!-- Deck Core and extensions -->
+  <script src="../core/deck.core.js"></script>
+  <script src="../extensions/menu/deck.menu.js"></script>
+  <script src="../extensions/goto/deck.goto.js"></script>
+  <script src="../extensions/status/deck.status.js"></script>
+  <script src="../extensions/navigation/deck.navigation.js"></script>
+  <script src="../extensions/scale/deck.scale.js"></script>
+
+  <!-- Initialize the deck -->
+  <script>
+    $(function() {
+      $.deck('.slide');
+    });
+  </script>
+
+</body>
+</html>
