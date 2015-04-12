@@ -274,6 +274,24 @@ scores = (92, 78, 83, 65)</code></pre>
       <img src="images/18_stage_variables_pos.png" alt="game-over-variables">
     </section> 
 
+    <section class="slide" id="Q-part1">
+      <h2>Set up "Q" Sprite scripts (Setup)</h2>
+        <p>Add a few scripts for the set up.  Use a <em>repeat loop</em> to get a random question from our number of questions (<strong>questionNumber</strong> variable).</p>
+      <img src="images/19_Q_script_1.png" alt="Q-part1">
+    </section>
+
+  <section class="slide" id="Q-part2">
+      <h2>Set up "Q" Sprite scripts (Ask)</h2>
+        <p>Add the selected question to our <strong>askedQuestion</strong> list, so we don't ask it again.  Set the <strong>correctAnswer</strong> to check for. Then, <em>ask</em> the question and wait for the user's answer.</p>
+      <img src="images/20_Q_script_2.png" alt="Q-part2">
+    </section>
+
+  <section class="slide" id="Q-part3">
+      <h2>Set up "Q" Sprite scripts (Check Answer)</h2>
+        <p>Use an <strong>if-then-else</strong> loop to evaluate for the user's answer and do the proper actions.</p>
+      <img src="images/21_Q_script_3.png" alt="Q-part3">
+    </section>
+
     <section class="slide" id="answer1">
       <h2>Set up "A1" Sprite scripts (Answer1)</h2>
         <p>Position the Sprite. Listen to broadcasts.  <strong>Say</strong> the <em>item</em> # from the <strong>Answer1</strong> array matching the <em>question</em> # of the <strong>getQuestion</strong> variable.</p>
